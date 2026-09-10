@@ -42,7 +42,7 @@ export const datamodule = mongo.model("SignedUser",users)
  
 // Washa CORS kwa kutumia masharti uliyoweka
 const corsValue= [              
-    'http://localhost:5173',
+    'https://webwithsam.github.io/myfirstfrontend/',
     "http://localhost:5174"           
 ];
 
