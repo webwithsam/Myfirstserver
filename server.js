@@ -67,7 +67,9 @@ app.post("/logout",(req,res)=>{
                     })
     res.json({"message":"logout"})
 })
-
+app.get("/test",(req,res)=>{
+    res.json({"majibu":"server ipo poa"})
+})
 
 
 // routes
