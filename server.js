@@ -21,12 +21,12 @@ app.use(express.json())
 
 try {
     mongo.connect(data).then(()=>{
-    console.log("connected to database")
+    console.log("connected to alts database hha ha a aha aha aha  hahaha ")
      app.listen(port,()=>{
    console.log("the server is working fine ") 
        })
 })
-} catch (error) {
+} catch(error) {
     console.log("something is wrong")
 }
 
