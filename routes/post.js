@@ -4,7 +4,7 @@ import encrypt from "bcrypt";
 import dotenv from "dotenv"
 import jwt from "jsonwebtoken"
 
-dotenv.config
+dotenv.config()
 const route = express.Router();
 
 
@@ -159,20 +159,20 @@ const signupvalidation = ()=>{
 }
 
 route.post("/admin/login", async(req,res)=>{
-  // console.log("samuel = ", process.env.siri)
+   console.log("samuel = ", process.env.masterpin)
    const  loginifo = req.body; 
-   /// check kama kuna main Admin hapa 
+  // check kama kuna main Admin hapa 
   if (loginifo.email === mainAdminEmail){
       // console.log("this is oky")
     if(loginifo.password === passmainAdmin){
-          // console.log("this is super Adimn");
+          console.log("this is super Adimn");
       const token = jwt.sign(
         {
           superAdmin: mainAdminEmail
         },
           process.env.siri,
         {
-          expiresIn:"5.5min"
+          expiresIn:"10.5min"
         }
       )
       
@@ -181,12 +181,15 @@ route.post("/admin/login", async(req,res)=>{
                 httpOnly:true,
                 secure:true,
                 sameSite:"none",
-                maxAge:60000
+                maxAge:7200000
           }
        )
        res.json({'gonext':true});
        
     }
+  }
+  else{
+    res.json({"message":"check the login"})
   }
 });
 
