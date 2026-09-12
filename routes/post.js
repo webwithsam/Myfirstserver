@@ -210,7 +210,7 @@ route.post("/user/login", async(req,res)=>{
                   maxAge: 120000,
                   httpOnly: true,
                   secure: true,
-                  sameSite: "strict"
+                  sameSite: "none"
                 });    
                 res.json({
                     "state":"nothing",
