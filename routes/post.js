@@ -243,7 +243,7 @@ route.post("/user/login", async(req,res)=>{
   
 route.post("/signup",async(req,res)=>{
   const signupData = req.body;
-  // console.log(signupData)  
+   console.log(signupData)  
   if(signupvalidation){
       const  checkemail = await datamodule.findOne({email:signupData.email});
       if(!checkemail){

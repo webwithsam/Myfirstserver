@@ -23,7 +23,7 @@ try {
     mongo.connect(data).then(()=>{
     console.log("connected to alts database hha ha a aha aha aha  hahaha ")
      app.listen(port,()=>{
-   console.log("the server is working fine ") 
+   console.log(`the server is working fine at ${port}`) 
        })
 })
 } catch(error) {
@@ -42,8 +42,10 @@ export const datamodule = mongo.model("SignedUser",users)
  
 // Washa CORS kwa kutumia masharti uliyoweka
 const corsValue= [              
-    'https://webwithsam.github.io/myfirstfrontend/',
-    "http://localhost:5174"           
+    "https://webwithsam.github.io",
+    "http://localhost:5174",
+    "http://localhost:5173",
+             
 ];
 
 const corsOptions = {
