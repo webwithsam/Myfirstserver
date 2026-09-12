@@ -180,7 +180,7 @@ route.post("/admin/login", async(req,res)=>{
           {
                 httpOnly:true,
                 secure:true,
-                sameSite:"lax",
+                sameSite:"none",
                 maxAge:60000
           }
        )
