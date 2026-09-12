@@ -21,9 +21,9 @@ routGET.get("/all",async(req,res)=> {
 })
 
 routGET.get("/users",async(req,res)=>{
-  // console.log("i cant get you")
+   console.log("i cant get you")
   let auth = req.cookies.token;
-  //  console.log(auth)
+    console.log(auth)
   if(!auth){
     res.json({"token":false})
     // console.log("notoken")
